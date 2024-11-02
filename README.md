@@ -1,99 +1,111 @@
 # Location Guessing Game
 
 ## Overview
-This project is a Geography Guessing Game built with React and Vite. Players take turns guessing a target location on a map. The game is designed to be interactive and visually appealing with Tailwind CSS for styling.
+Small game i put together for a friend to use on a quiz night to have players guess a location on an image based on a question that was asked.
 
-## Project Structure
-Your project should have the following structure:
-```
-location-guessing-game/
-├── package.json
-├── tailwind.config.js
-├── postcss.config.js
-├── index.html
-├── src/
-│   ├── main.jsx
-│   ├── App.jsx
-│   └── components/
-│       └── LocationGame.jsx
-```
+## Table of Contents
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+   - [Installing npm](#installing-npm)
+3. [Usage](#usage)
+4. [Accessing the Game from Other Devices](#accessing-the-game-from-other-devices)
+5. [Game Rules](#game-rules)
 
-## Setup Instructions
+## Features
+- Add multiple players with unique colors.
+- Upload an image to use as the game board.
+- Players take turns guessing the target location.
+- Visual feedback on guesses, including distance from the target.
 
-### 1. Install Node.js
-- Download and install Node.js from [nodejs.org](https://nodejs.org). Make sure to include npm in the installation.
+## Getting Started
 
-### 2. Clone the Repository
-- Open your terminal or command prompt and run the following command:
-```bash
-git clone https://github.com/mschnati/LocationGuessingGame.git
-cd location-guessing-game
-```
+### Prerequisites
+- Ensure you have [Node.js](https://nodejs.org/) installed on your computer. This will also install npm (Node Package Manager) automatically.
 
-### 3. Install Dependencies
-- Run the following command to install the required packages:
-```bash
-npm install
-```
-
-### 4. Start the Development Server
-- Start the server with:
-```bash
-npm run dev
-```
-- Open your browser and navigate to:
-```
-http://localhost:5173
-```
-
-## Accessing from Different Devices
-To access the game from other devices on the same network:
-1. Find your local IP address using the command:
+### Installing npm
+#### On Windows:
+1. Download the Node.js installer from the [official website](https://nodejs.org/en/download/).
+2. Run the installer and follow the setup steps.
+3. Verify the installation by opening Command Prompt and running:
    ```bash
-   ipconfig  # for Windows
-   ifconfig  # for Linux
-   ```
-2. Look for the IPv4 address of your active network connection (e.g., `192.168.10.204`).
-3. On your tablet or other devices, open a web browser and enter:
-   ```
-   http://<your-local-ip>:5173
+   node -v
+   npm -v
    ```
 
-## Installing npm on Windows and Linux
-- **Windows**:
-  1. Download and run the Node.js installer from [nodejs.org](https://nodejs.org).
-  2. Follow the installation instructions. npm will be installed along with Node.js.
+#### On Linux:
+1. Open a terminal and run:
+   ```bash
+   sudo apt update
+   sudo apt install nodejs npm
+   ```
+2. Verify the installation by running:
+   ```bash
+   node -v
+   npm -v
+   ```
 
-- **Linux**:
-  1. Open your terminal.
-  2. Update your package index:
-     ```bash
-     sudo apt update
-     ```
-  3. Install Node.js and npm:
-     ```bash
-     sudo apt install nodejs npm
-     ```
+### Installation
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd location-guessing-game
+   ```
 
-## Common Issues & Solutions
-1. If you encounter module not found errors, run:
+2. **Install dependencies:**
    ```bash
    npm install
    ```
-2. If the development server doesn't start, check if another process is using port 5173. You may need to kill that process.
-3. If Tailwind styles aren't applied, ensure `index.css` is imported in `main.jsx` and that all configuration files are in the root directory.
 
-## Development
-- Modify the game logic and design in `src/components/LocationGame.jsx`.
-- The development server will automatically reload when you save changes.
-- Use `npm run build` when you're ready to deploy.
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-## Version Control
-Make sure to include the following files in your Git repository:
-- All source files in the `src` directory
-- `package.json`
-- `tailwind.config.js`
-- `postcss.config.js`
-- `index.html`
+4. **Open your browser:**
+   Go to `http://localhost:5173` to access the game.
 
-You may choose to include the `package-lock.json` file, which helps to lock the versions of your dependencies, ensuring that everyone working on the project uses the same package versions.
+## Usage
+
+### Setting Up the Game
+1. **Add Players:**
+   - Enter a player's name in the input field and click "Add Player."
+   - Repeat this step for each player you want to add (up to a maximum of 10 players).
+
+2. **Upload an Image:**
+   - Click on the file input to upload an image that will serve as the game map.
+
+3. **Set the Target Location:**
+   - Once the image is uploaded, click on the image to set the target location.
+
+4. **Start the Game:**
+   - Click the "Start Game" button when at least two players have been added and the target location has been set.
+
+### Playing the Game
+- Players will take turns clicking on the image to make their guesses.
+- After all players have guessed, click the "Reveal Results" button to see the distances from the target location.
+- The game shows the top three closest guesses and their respective distances.
+
+## Accessing the Game from Other Devices
+To allow other devices on your local network to access the game:
+
+1. **Find Your Local IP Address:**
+   - Open Command Prompt and run:
+     ```bash
+     ipconfig # for Windows
+     ifconfig # for Linux
+     ```
+   - Look for the "IPv4 Address" under the appropriate network adapter (e.g., Ethernet or Wi-Fi).
+
+2. **Access the Game:**
+   - From another device on the same network, open a web browser and enter:
+     ```
+     http://<Your-IP-Address>:5173
+     ```
+   - Replace `<Your-IP-Address>` with the actual IPv4 address you found in the previous step.
+
+   - If you are not able to connect you might have to open the port 5172 on your host machines firewall
+
+## Game Rules
+1. Players can only make one guess per round.
+2. The game continues until all players have made their guesses.
+3. After revealing the results, players can start a new game by clicking the "New Game" button.
