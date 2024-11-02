@@ -7,8 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Upload, MapPin, Users, Trophy, ArrowRight, X } from 'lucide-react';
 
 const COLORS = [
-  '#f00606', '#14b311', '#1911b3', '#9e1c82', '#c96212',
-  '#b59624', '#9B59B6', '#3498DB', '#E67E22', '#45B7D1'
+  '#F00606', '#14B311', '#1911B3', '#9E1C82', '#C96212',
+  '#B59624', '#9B59B6', '#3498DB', '#E67E22', '#45B7D1'
 ];
 
 const LocationGame = () => {
@@ -159,7 +159,7 @@ const LocationGame = () => {
     </div>
   );
 
-  const canStartGame = players.length >= 2 && targetPoint && imageUrl && question.trim();
+  const canStartGame = players.length >= 2 && targetPoint && imageUrl;
 
   const remainingPlayers = players.filter(player => 
     !guesses.some(guess => guess.playerId === player.id)
@@ -262,7 +262,7 @@ const LocationGame = () => {
             </div>
             
             {imageUrl && !targetPoint && (
-              <div className="text-sm text-red-800 animate-pulse">
+              <div className="text-sm text-gray-600 animate-pulse">
                 Click on the image to set the target location
               </div>
             )}
