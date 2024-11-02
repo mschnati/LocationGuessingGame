@@ -3,8 +3,8 @@
 ## Overview
 Small game i put together for a friend to use on a quiz night to have players guess a location on an image based on a question that was asked.
 
-[Demo Video](https://github.com/user-attachments/assets/0d966625-1f12-4dff-ae24-52cf71ad4479)
 
+[demo.webm](https://github.com/user-attachments/assets/0280f2b6-17a3-4a80-9d98-67cbef063461)
 
 ## Table of Contents
 1. [Features](#features)
