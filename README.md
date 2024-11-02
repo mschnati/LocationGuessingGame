@@ -9,7 +9,6 @@ Small game i put together for a friend to use on a quiz night to have players gu
    - [Installing npm](#installing-npm)
 3. [Usage](#usage)
 4. [Accessing the Game from Other Devices](#accessing-the-game-from-other-devices)
-5. [Game Rules](#game-rules)
 
 ## Features
 - Add multiple players with unique colors.
@@ -47,7 +46,7 @@ Small game i put together for a friend to use on a quiz night to have players gu
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/mschnati/LocationGuessingGame.git
    cd location-guessing-game
    ```
 
@@ -62,7 +61,7 @@ Small game i put together for a friend to use on a quiz night to have players gu
    ```
 
 4. **Open your browser:**
-   Go to `http://localhost:5173` to access the game.
+   Go to `http://localhost:5173` to access the game locally or use one of the IPs shown in the terminal to access the game with other devices.
 
 ## Usage
 
@@ -72,7 +71,7 @@ Small game i put together for a friend to use on a quiz night to have players gu
    - Repeat this step for each player you want to add (up to a maximum of 10 players).
 
 2. **Upload an Image:**
-   - Click on the file input to upload an image that will serve as the game map.
+   - Click on the file input or drag and drop to upload an image that will serve as the game map.
 
 3. **Set the Target Location:**
    - Once the image is uploaded, click on the image to set the target location.
@@ -80,32 +79,18 @@ Small game i put together for a friend to use on a quiz night to have players gu
 4. **Start the Game:**
    - Click the "Start Game" button when at least two players have been added and the target location has been set.
 
+5. **Choose Player:**
+   - Choose the player on the button that you want to take his turn
+
 ### Playing the Game
 - Players will take turns clicking on the image to make their guesses.
 - After all players have guessed, click the "Reveal Results" button to see the distances from the target location.
 - The game shows the top three closest guesses and their respective distances.
 
 ## Accessing the Game from Other Devices
-To allow other devices on your local network to access the game:
 
-1. **Find Your Local IP Address:**
-   - Open Command Prompt and run:
-     ```bash
-     ipconfig # for Windows
-     ifconfig # for Linux
-     ```
-   - Look for the "IPv4 Address" under the appropriate network adapter (e.g., Ethernet or Wi-Fi).
-
-2. **Access the Game:**
-   - From another device on the same network, open a web browser and enter:
-     ```
-     http://<Your-IP-Address>:5173
-     ```
-   - Replace `<Your-IP-Address>` with the actual IPv4 address you found in the previous step.
-
-   - If you are not able to connect you might have to open the port 5172 on your host machines firewall
-
-## Game Rules
-1. Players can only make one guess per round.
-2. The game continues until all players have made their guesses.
-3. After revealing the results, players can start a new game by clicking the "New Game" button.
+   ```bash
+   npm run dev
+   ```
+   - After starting the local server through this command your IP addresses will be displayed in the terminal
+   - The Quizmaster opens the webapp on the tablet, sets up the picture and the usernames and then pass the tablet along to the participants
