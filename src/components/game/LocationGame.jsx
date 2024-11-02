@@ -7,8 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Upload, MapPin, Users, Trophy, ArrowRight, X } from 'lucide-react';
 
 const COLORS = [
-  '#F00606', '#14B311', '#1911B3', '#9E1C82', '#C96212',
-  '#B59624', '#9B59B6', '#3498DB', '#E67E22', '#45B7D1'
+  '#C96212', '#14B311', '#1911B3', '#9E1C82', '#B59624',
+  '#A64830', '#9B59B6', '#3498DB', '#E67E22', '#45B7D1'
 ];
 
 const LocationGame = () => {
