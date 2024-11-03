@@ -224,7 +224,7 @@ const LocationGame = () => {
                 <Textarea
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
-                  placeholder="Enter the question for players (e.g., 'Where is...?')"
+                  placeholder="Enter the question for the players ('Where is...?')"
                   className="resize-none"
                   rows={2}
                 />
@@ -245,7 +245,7 @@ const LocationGame = () => {
                   />
                   <label
                     htmlFor="image-upload"
-                    className="flex items-center justify-center w-full h-32 px-4 transition border-2 border-dashed rounded-lg cursor-pointer bg-white dark:bg-gray-950 border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 focus:outline-none"
+                    className="flex items-center justify-center w-full h-32 px-4 border-2 border-dashed rounded-lg cursor-pointer bg-white dark:bg-gray-950 border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 focus:outline-none"
                     onDragOver={handleDragOver}
                     onDragLeave={handleDragLeave}
                     onDrop={handleDrop}
