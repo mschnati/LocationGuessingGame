@@ -5,6 +5,8 @@ Small game i put together for a friend to use on a quiz night to have players gu
 ## Try it
 You can try it out on this [Demo Website](https://locationguessinggame.onrender.com/), but be patient as its free and will spin down with inactivity, which can delay requests by 50 seconds or more.
 
+Multidevice version available [here](https://github.com/mschnati/Location-Guessing-Multidevice).
+
 [demo.webm](https://github.com/user-attachments/assets/0280f2b6-17a3-4a80-9d98-67cbef063461)
 
 ## Table of Contents
